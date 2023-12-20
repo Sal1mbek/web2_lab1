@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Добро пожаловать!</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            text-align: center;
+            margin: 100px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        p {
+            color: #555;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Добро пожаловать на мою страницу!</h1>
+    <p>Измените путь чтобы увидеть другие стрнаницы <br>/smile <br>/cry</p>
+    <div id="greeting"></div>
+
+    <script>
+        // Получение данных из localStorage
+        const username = localStorage.getItem('username');
+        const greetingElement = document.getElementById('greeting');
+
+        // Отображение приветственного сообщения с использованием имени пользователя
+        greetingElement.innerHTML = `<h1>Добро пожаловать, ${username || 'Гость'}!</h1>`;
+    </script>
+</html>
